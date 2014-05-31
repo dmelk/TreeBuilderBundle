@@ -1,0 +1,33 @@
+{% extends "MelkTreeBuilderBundle::base.html.twig" %}
+
+{% block body%}
+    <script>
+        Ext.Loader.setConfig({
+            enabled: true
+        });
+
+
+        Ext.application({
+            name: 'melk',
+            namespaces: ['melk'],
+            appFolder: '{{ asset('bundles/melktreebuilder/js') }}',
+            paths: {
+                'melk' : '{{ asset('bundles/melktreebuilder/js') }}',
+            },
+
+            controllers: [],
+
+            launch: function() {
+                var store = Ext.create('Ext.data.TreeStore', {
+                   root: {
+                       children: {{ tree|json_encode()|raw }}
+                   } 
+                });
+                // checking for stores and add data to them if they are empty
+                Ext.create('melk.view.Tree', {
+                    store: store
+                });
+            }
+        });
+    </script>
+{% endblock %}

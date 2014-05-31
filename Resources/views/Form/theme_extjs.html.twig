@@ -1,0 +1,10 @@
+{% block form_widget_simple %}
+    {
+        {% set type = type|default('text') %}
+        xtype: '{{ type }}field',
+        fieldLabel: '{{ label }}',
+        name: '{{ full_name }}',
+        id: '{{ id }}',
+        allowBlank: {% if required is defined and required %}false{% else %}true{% endif %}
+    }
+{% endblock %}

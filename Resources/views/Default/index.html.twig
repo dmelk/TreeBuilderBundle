@@ -1,1 +1,38 @@
-Hello {{ name }}!
+{% extends "MelkTreeBuilderBundle::base.html.twig" %}
+
+{% block body%}
+    {% form_theme form 'MelkTreeBuilderBundle:Form:theme_extjs.html.twig' %}
+    <script>
+        Ext.Loader.setConfig({
+            enabled: true
+        });
+
+
+        Ext.application({
+            name: 'melk',
+            namespaces: ['melk'],
+            appFolder: '{{ asset('bundles/melktreebuilder/js') }}',
+            paths: {
+                'melk' : '{{ asset('bundles/melktreebuilder/js') }}',
+            },
+
+            controllers: [],
+
+            launch: function() {
+                // checking for stores and add data to them if they are empty
+                Ext.create('melk.view.FileUpload', {
+                    url: '{{ form.vars.action }}',
+                    method: '{{ form.vars.method }}',
+                    error: {{ error|default(false)|json_encode()|raw }},
+                    errorText: '{{ errorText|default('') }}',
+                    formItems: [
+                        {% for field in form.children %}
+                            {{ form_widget(field) }}
+                            {% if not loop.last %},{% endif %}
+                        {% endfor %}
+                    ]
+                });
+            }
+        });
+    </script>
+{% endblock %}

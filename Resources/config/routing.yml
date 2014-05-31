@@ -1,3 +1,9 @@
-melk_tree_builder_homepage:
-    pattern:  /hello/{name}
+melk_tree_builder_index:
+    pattern:  /
     defaults: { _controller: MelkTreeBuilderBundle:Default:index }
+
+melk_tree_builder_tree:
+    pattern:  /tree
+    defaults: { _controller: MelkTreeBuilderBundle:Default:tree }
+    requirements:
+      _method: POST
