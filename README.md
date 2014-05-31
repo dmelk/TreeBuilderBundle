@@ -26,5 +26,4 @@ For example:
 tree:
     resource: '@MelkTreeBuilderBundle/Resources/config/routing.yml'
     prefix: /
-
 ```
