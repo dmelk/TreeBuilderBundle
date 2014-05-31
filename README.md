@@ -27,3 +27,5 @@ tree:
     resource: '@MelkTreeBuilderBundle/Resources/config/routing.yml'
     prefix: /
 ```
+
+Don't forget to install assets!
