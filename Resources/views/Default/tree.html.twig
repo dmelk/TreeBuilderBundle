@@ -23,7 +23,6 @@
                        children: {{ tree|json_encode()|raw }}
                    } 
                 });
-                // checking for stores and add data to them if they are empty
                 Ext.create('melk.view.Tree', {
                     store: store
                 });

@@ -19,7 +19,6 @@
             controllers: [],
 
             launch: function() {
-                // checking for stores and add data to them if they are empty
                 Ext.create('melk.view.FileUpload', {
                     url: '{{ form.vars.action }}',
                     method: '{{ form.vars.method }}',

@@ -3,7 +3,7 @@ melk_tree_builder_index:
     defaults: { _controller: MelkTreeBuilderBundle:Default:index }
 
 melk_tree_builder_tree:
-    pattern:  /tree
+    pattern:  /show
     defaults: { _controller: MelkTreeBuilderBundle:Default:tree }
     requirements:
       _method: POST
