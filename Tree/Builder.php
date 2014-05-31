@@ -41,7 +41,7 @@ class Builder {
             $data = explode('|',  $data, 3);
             if (count($data) < 3) throw new \Exception('Wrong file format', 501);
             list($id, $parent_id, $name) = $data;
-            $this->nodes[$id] = ['id' => $id, 'parent_id' => $parent_id, 'name' => $name, 'children' => []];
+            $this->nodes[$id] = ['id' => $id, 'parent_id' => $parent_id, 'text' => $name, 'children' => []];
             if (!isset($this->children[$parent_id])) $this->children[$parent_id] = [];
             $this->children[$parent_id][] = $id;
         }
@@ -84,8 +84,8 @@ class Builder {
      * @return int
      */
     private function sortNode($nodeA, $nodeB) {
-        if ($nodeA['name'] == $nodeB['name']) return 0;
-        return ($nodeA['name'] > $nodeB['name'])? 1 : -1;
+        if ($nodeA['text'] == $nodeB['text']) return 0;
+        return ($nodeA['text'] > $nodeB['text'])? 1 : -1;
     }
     
 }

@@ -41,16 +41,16 @@ class BuilderTest extends \PHPUnit_Framework_TestCase{
         
         $this->assertEquals($tree,
             [
-                ['id' => 1, 'parent_id' => 0, 'name' => 'node1', 
+                ['id' => 1, 'parent_id' => 0, 'text' => 'node1', 
                     'children' => [
-                        ['id' => 3, 'parent_id' => 1, 'name' => 'node1-1', 
-                            'children' => [['id' => 5, 'parent_id' => 3, 'name' => 'node3-1', 'children' => []]]
+                        ['id' => 3, 'parent_id' => 1, 'text' => 'node1-1', 
+                            'children' => [['id' => 5, 'parent_id' => 3, 'text' => 'node3-1', 'children' => []]]
                         ],
-                        ['id' => 4, 'parent_id' => 1, 'name' => 'node1-2', 'children' => []]
+                        ['id' => 4, 'parent_id' => 1, 'text' => 'node1-2', 'children' => []]
                     ]
                 ],
-                ['id' => 2, 'parent_id' => -1, 'name' => 'node2', 
-                    'children' => [['id' => 6, 'parent_id' => 2, 'name' => 'node2-1', 'children' => []]]
+                ['id' => 2, 'parent_id' => -1, 'text' => 'node2', 
+                    'children' => [['id' => 6, 'parent_id' => 2, 'text' => 'node2-1', 'children' => []]]
                 ]
             ]
         );
@@ -62,16 +62,16 @@ class BuilderTest extends \PHPUnit_Framework_TestCase{
         
         $this->assertEquals($tree,
             [
-                ['id' => 1, 'parent_id' => 0, 'name' => 'node1', 
+                ['id' => 1, 'parent_id' => 0, 'text' => 'node1', 
                     'children' => [
-                        ['id' => 3, 'parent_id' => 1, 'name' => 'node1-1', 
-                            'children' => [['id' => 5, 'parent_id' => 3, 'name' => 'node3-1', 'children' => []]]
+                        ['id' => 3, 'parent_id' => 1, 'text' => 'node1-1', 
+                            'children' => [['id' => 5, 'parent_id' => 3, 'text' => 'node3-1', 'children' => []]]
                         ],
-                        ['id' => 4, 'parent_id' => 1, 'name' => 'node1-2', 'children' => []]
+                        ['id' => 4, 'parent_id' => 1, 'text' => 'node1-2', 'children' => []]
                     ]
                 ],
-                ['id' => 2, 'parent_id' => 0, 'name' => 'node2', 
-                    'children' => [['id' => 6, 'parent_id' => 2, 'name' => 'node2-1', 'children' => []]]
+                ['id' => 2, 'parent_id' => 0, 'text' => 'node2', 
+                    'children' => [['id' => 6, 'parent_id' => 2, 'text' => 'node2-1', 'children' => []]]
                 ]
             ]
         );
@@ -83,16 +83,16 @@ class BuilderTest extends \PHPUnit_Framework_TestCase{
         
         $this->assertEquals($tree,
             [
-                ['id' => 1, 'parent_id' => 0, 'name' => 'node1', 
+                ['id' => 1, 'parent_id' => 0, 'text' => 'node1', 
                     'children' => [
-                        ['id' => 3, 'parent_id' => 1, 'name' => 'node1-1', 
-                            'children' => [['id' => 5, 'parent_id' => 3, 'name' => 'node3-1', 'children' => []]]
+                        ['id' => 3, 'parent_id' => 1, 'text' => 'node1-1', 
+                            'children' => [['id' => 5, 'parent_id' => 3, 'text' => 'node3-1', 'children' => []]]
                         ],
-                        ['id' => 4, 'parent_id' => 1, 'name' => 'node1-2', 'children' => []]
+                        ['id' => 4, 'parent_id' => 1, 'text' => 'node1-2', 'children' => []]
                     ]
                 ],
-                ['id' => 2, 'parent_id' => 0, 'name' => 'node2', 
-                    'children' => [['id' => 6, 'parent_id' => 2, 'name' => 'node2-1', 'children' => []]]
+                ['id' => 2, 'parent_id' => 0, 'text' => 'node2', 
+                    'children' => [['id' => 6, 'parent_id' => 2, 'text' => 'node2-1', 'children' => []]]
                 ]
             ]
         );
